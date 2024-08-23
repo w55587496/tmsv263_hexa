@@ -1,0 +1,300 @@
+
+#menu {
+	background: #000000;
+    top: 0px;
+	height: 45px;
+	padding-left: 18px;
+	border-radius: 10px;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+	text-align: left;
+}
+#menu li {
+	display: inline-block;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 24px;
+}
+#menu a img{
+    height: 25px; /* 設置圖片高度與 line-height 匹配 */
+    margin-right: 10px; /* 添加右邊距以分隔圖片和文本 */
+    vertical-align: middle; /* 確保圖片垂直對齊 */
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: black;
+	background: #F2F2F2;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	color: #FFFFFF;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 24px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#444444;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:#FFFFFF}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+
+.image-container {
+    transform: scale(2);
+    top:200px;
+    left:200px;
+    position: relative; /* 設置為相對定位 */
+    display: inline-block; /* 使容器適應圖片的大小 */
+    max-width: 700; /* 設置最大寬度 */
+    height: auto; /* 高度自動調整以保持圖片比例 */
+}
+.button-container{
+    margin-top: 400px;
+    margin-left: 350px;
+}
+
+.Cal {
+    width: 100px; /* 按鈕寬度 */
+    height:auto; /* 按鈕高度 */
+    position: relative; /* 或使用 absolute */
+    z-index: 10; /* 設置一個較高的層級 */
+    font-size: 30px;
+    box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+
+.Cal:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+.Cal:active {
+	position:relative;
+	top:1px;
+}
+
+
+.image-container img {
+    width: 100%; /* 確保圖片自適應容器 */
+    height: auto; /* 保持圖片比例 */
+}
+
+.data-group {
+    position: absolute; /* 在容器內部進行絕對定位 */
+    top: 0; /* 設置 top 為 0 */
+    left: 0; /* 設置 left 為 0 */
+    width: 100%; /* 根據需要調整 */
+    height: 100%; /* 根據需要調整 */
+}
+
+.data-group input {
+    position: absolute; /* 絕對定位每個 input */
+    font-size: 16px;
+	background: #FFFFFF;
+	color: #000000;
+    max-width: 35px;
+}
+
+/* matrix top left*/
+.data-group input:nth-child(1) {
+    top:7%;
+    left:6%;
+}
+
+.data-group input:nth-child(2) {
+    top:7%;
+    left:20%;
+}
+
+.data-group input:nth-child(3) {
+    top:19%;
+    left:13%;
+}
+
+.data-group input:nth-child(4) {
+    top:19%;
+    left:27%;
+}
+
+.data-group input:nth-child(5) {
+    top:32%;
+    left:20%;
+}
+
+.data-group input:nth-child(6) {
+    top:32%;
+    left:35%;
+}
+
+/* matrix top left*/
+
+.data-group input:nth-child(7) {
+    top:7%;
+    left:83%;
+}
+
+.data-group input:nth-child(8) {
+    top:19%;
+    left:76%;
+}
+
+.data-group input:nth-child(9) {
+    top:19%;
+    left:62%;
+}
+
+.data-group input:nth-child(10) {
+    top:32%;
+    left:55%;
+}
+
+/* matrix bottom left*/
+
+.data-group input:nth-child(11) {
+    top:60%;
+    left:35%;
+}
+
+.data-group input:nth-child(12) {
+    top:72%;
+    left:27%;
+}
+
+.data-group input:nth-child(13) {
+    top:72%;
+    left:13%;
+}
+
+.data-group input:nth-child(14) {
+    top:84%;
+    left:6%;
+}
+
+/* matrix bottom right*/
+
+.data-group input:nth-child(15) {
+    top:60%;
+    left:55%;
+}
+
+.data-group input:nth-child(16) {
+    top:72%;
+    left:62%;
+}
+
+.data-group input:nth-child(17) {
+    top:72%;
+    left:76%;
+}
+
+.data-group input:nth-child(18) {
+    top:84%;
+    left:84%;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: auto;
+    align-content: center
+}
+.table-container {
+    flex: 1;
+    margin: 10px 10px 20px 450px;
+    z-index: 1;
+    font-size: 24px;
+    border: 3px solid #000000;
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    border-collapse: collapse;
+    overflow-y: scroll;
+}
+.table-container table {
+    width: 100%; /* 表格宽度100%，填满容器 */
+    height: 100%;
+    border-collapse: collapse; /* 合并边框，避免双重边框 */
+}
+
+
+th, td {
+    border: 1px solid #000000;
+    padding: 5px 4px;
+    height: 50px;
+    background: #CFCFCF;
+    background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+    background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+    background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+    border-bottom: 3px solid #000000;
+}

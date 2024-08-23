@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hexa 進度計算機</title>
+</head>
+<body>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+            <li><a href='http://'>Home</a></li>
+            <li><a class='dropdown-arrow' href='http://'>Contact Me</a>
+            <ul class='sub-menus'>
+                <li>
+                    <a href='https://github.com/w55587496'><img src="./img/github.png">Github</a>
+                </li>
+                <li><a href='https://www.twitch.tv/yunlostinemotion'><img src="./img/twitch.png">Twitch</a></li>
+            </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex-container">
+        <div style="position: relative;">
+            <div class="image-container">
+                <img src="./img/bg.png">
+                <div class="data-group">
+                    <!--top left-->
+                    <input type="hidden" id="origin-6" min="0" max="30" placeholder="鎖" value="0" readonly/>
+                    <input type="hidden" id="origin-5" min="0" max="30" placeholder="鎖" value="0" readonly/>
+                    <input type="hidden" id="origin-4" min="0" max="30" placeholder="鎖" value="0" readonly/>
+                    <input type="hidden" id="origin-3" min="0" max="30" placeholder="鎖" value="0" readonly/>
+                    <input type="hidden" id="origin-2" min="0" max="30" placeholder="鎖" value="0" readonly/>
+                    <input type="number" id="origin-1" min="0" max="30" placeholder="0" required/>
+
+                    <!--top right-->
+                    <input type="hidden" id="mastery-4" min="0" max="30" placeholder="鎖" value="0" readonly/>
+                    <input type="hidden" id="mastery-3" min="0" max="30" placeholder="鎖" value="0" readonly/>
+                    <input type="number" id="mastery-2" min="0" max="30" placeholder="0" value="0" required/>
+                    <input type="number" id="mastery-1" min="0" max="30" placeholder="0" value="0" required/>
+
+                    <!--bottom left-->
+                    <input type="number" id="enhance-1" min="0" max="30" placeholder="0" value="0" required/>
+                    <input type="number" id="enhance-2" min="0" max="30" placeholder="0" value="0" required/>
+                    <input type="number" id="enhance-3" min="0" max="30" placeholder="0" value="0" required/>
+                    <input type="number" id="enhance-4" min="0" max="30" placeholder="0" value="0" required/>
+
+                    <!--bottom right-->
+                    <input type="number" id="common-1" min="0" max="30" placeholder="0" value="0" required/>
+                    <input type="hidden" id="common-2" min="0" max="30" placeholder="鎖" value="0" required/>
+                    <input type="hidden" id="common-3" min="0" max="30" placeholder="鎖" value="0" required/>
+                    <input type="hidden" id="common-4" min="0" max="30" placeholder="鎖" value="0" required/>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="button" class="Cal" onclick="getResult()">計算</button>
+            </div>
+        </div>
+        <div class="table-container">
+        </div>
+    </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
